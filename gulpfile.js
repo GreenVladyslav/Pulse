@@ -24,7 +24,7 @@ gulp.task('styles', function() {
 });
 // следит за обновлением файлов и потом запустить parallel она когда выполниться обновит бразуер
 gulp.task("watch", function() {
-    gulp.watch("src/sass/*.+(scss|sass)", gulp.parallel("styles"));
+    gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel("styles"));
     gulp.watch("src/*.html").on("change", browserSync.reload); /* следит за именением файлы */
 });
 
