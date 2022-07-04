@@ -1,5 +1,5 @@
 .catalog {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     &__tabs {
         margin-top: 70px;
         display: flex;
@@ -31,12 +31,147 @@
             transform: skewX(25deg);
         }
         &_active {
-            background-color: #C70101;
+            background-color: $main-color;
             color: #ffffff;
             border: none;
         }
     }
     &__content {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 60px;
+        &_active {
+            display: flex;
+        }
+    }
+    &-item {
+        width: 300px;
+        min-height: 440px;
+        padding: 20px 20px 26px 20px;
+        border: 2px solid #E8E8E8;
+        margin-bottom: 20px;
+        overflow: hidden; /* card */
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+        &__subtitle {
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #0D0D0D;
+            text-align: center;
+        }
+        &__descr {
+            margin-top: 16px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            color: #0D0D0D;
+            text-align: center;
+        }
+        &__link {
+            margin-top: 17px;
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            color: $main-color;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: none;
+                color: $hover-link;
+            }
+        }
+        hr {
+            margin-top: 19px;
+            margin-bottom: 21px;
+            background-color: #E8E8E8;
+            border-bottom: none;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            font-weight: 300;
+            font-size: 14px;
+            color: #555555;
+            text-decoration: line-through;
+        }
+        &__price {
+            font-weight: 700;
+            font-size: 20px;
+            color: #050505; 
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: 0.5s all;
+            // padding-left: 19px;
+            padding-left: 1px;
+            margin-bottom: 0;
+            list-style-type: none;
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+                padding-left: 19px;
+            }
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                color: #555555;
+                line-height: 21px;
+                margin-bottom: 20px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    left: -14px;
+                    top: 7px;
+                    background-color: $main-color;
+                }
+            }
+        }
+        &__back {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            display: block;
+            color: $main-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: none;
+                color: $hover-link;
+            }
+        }
     }
 }

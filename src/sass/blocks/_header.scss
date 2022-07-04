@@ -9,7 +9,7 @@
         }
     }
     &__official {
-        color: #ffffff;
+        color: $white-color;
         font-weight: 500;
         font-size: 12px;
         text-align: center;
@@ -22,7 +22,7 @@
     &__phone {
         display: block;
         text-decoration: none;
-        color: #ffffff;
+        color: $white-color;
         font-weight: 700;
         font-size: 18px;
         &:hover {
