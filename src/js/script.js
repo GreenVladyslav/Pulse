@@ -1,4 +1,4 @@
-/* >>Slick Slider<< */
+/* Slick Slider */
 $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1000,
@@ -37,6 +37,76 @@ $(document).ready(function(){
   toggleClass('.catalog-item__link');
   toggleClass('.catalog-item__back');
 
+ /*  Modal */
+
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+
+  $('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    });
+  });
+
+  // $('.button_submit').on('click', function() {
+  //   $('.modal').fadeOut('slow');
+  //   $('.overlay, #thanks').delay(500).fadeIn('slow');
+  // });
+
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  });
+
+  $(window).on('click', function(e) {
+    if (e.target.classList.contains('overlay')) {
+      $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    }
+  });
+
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    }
+  });
+
+  /* Valid form */
+
+	function validateForm(form) {
+		$(form).validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 2
+				},
+				phone: "required",
+				email: {
+					required: true,
+					email: true
+				},
+			},
+			messages: {
+				name: {
+					required: "Пожалуйста, введите свое имя",
+					minlength: jQuery.validator.format("Введите {0} символов")
+				},
+				phone: "Пожалуйста, введите свой номер телефона",
+				email: {
+					required: "Пожалуйста, введите свой почту",
+					email: "Неправильно введен адрес почты"
+				}
+			}
+		});
+	}
+
+	validateForm('#consultation-form');
+	validateForm('#consultation form');
+	validateForm('#order form');
+
+	/* maskedinput */
+
+	$("input[name=phone]").mask("+38(099) 999-99-99");
 });
 
 
