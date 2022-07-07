@@ -9,10 +9,11 @@
     <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/> <!-- Slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> Tiny -->
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -66,19 +67,19 @@
 
             <div class="benefits__wrapper">
                 <div class="benefits__item">
-                    <img src="icons/reasons/cup.png" alt="cup" class="benefits__icon">
+                    <img src="icons/reasons/cup.png" alt="cup" class="benefits__icon benefits__icon_cup">
                     <div class="benefits__subtitle">Делимся опытом</div>
                     <div class="benefits__descr">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                 </div>
 
                 <div class="benefits__item">
-                    <img src="icons/reasons/heart.png" alt="heart" class="benefits__icon">
+                    <img src="icons/reasons/heart.png" alt="heart" class="benefits__icon benefits__icon_animated">
                     <div class="benefits__subtitle">Заботимся о здоровье</div>
                     <div class="benefits__descr">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
                 </div>
 
                 <div class="benefits__item">
-                    <img src="icons/reasons/shoe.png" alt="shoe" class="benefits__icon">
+                    <img src="icons/reasons/shoe.png" alt="shoe" class="benefits__icon benefits__icon_run">
                     <div class="benefits__subtitle">Учим бегать</div>
                     <div class="benefits__descr">Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a href="#">I LOVE RUNNING</a>.</div>
                 </div>
@@ -90,7 +91,7 @@
         <div class="container">
             <h2 class="title title_consultation">Получите бесплатную консультацию<br>по подбору пульсометра </h2>
             <div class="consultation__descr">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</div>
-            <form id="consultation-form" class="feed-form" action="#">  <!-- method="POST" -->
+            <form id="consultation-form" class="feed-form">  <!--action="#"  method="POST" -->
                 <input name="name" required type="text" placeholder="Ваше имя">
                 <input name="phone" required  placeholder="Ваш телефон">
                 <input name="email" required type="email" placeholder="Ваш E-mail">
@@ -465,7 +466,7 @@
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
             <div class="reviews__wrapper">
-                <div class="reviews__item">
+                <div class="reviews__item animate__fadeInUp animate__animated">
                     <img class="reviews__img" src="icons/catalog/client_1.png" alt="client">
                     <div class="reviews__text">
                         <div class="reviews__subtitle">Ирина Иванченко </div>
@@ -479,7 +480,7 @@
                     </div>
                 </div>
 
-                <div class="reviews__item">
+                <div class="reviews__item animate__fadeInUp animate__animated">
                     <img class="reviews__img" src="icons/catalog/client_2.png" alt="client">
                     <div class="reviews__text">
                         <div class="reviews__subtitle">Иван Сёмочкин</div>
@@ -493,7 +494,7 @@
                     </div>
                 </div>
 
-                <div class="reviews__item">
+                <div class="reviews__item animate__fadeInUp animate__animated">
                     <img class="reviews__img" src="icons/catalog/client_3.png" alt="client">
                     <div class="reviews__text">
                         <div class="reviews__subtitle">Юлия Дашкина</div>
@@ -528,7 +529,7 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
-            <form class="feed-form feed-mt25" action="#">
+            <form class="feed-form feed-mt25">
                 <input name="name" type="text" placeholder="Ваше имя">
                 <input name="phone" placeholder="Ваш телефон">
                 <input name="email" type="email" placeholder="Ваш E-mail">
@@ -541,7 +542,7 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
-            <form class="feed-form feed-mt25" action="#" method="POST">
+            <form class="feed-form feed-mt25">
                 <input name="name" required type="text" placeholder="Ваше имя">
                 <input name="phone" placeholder="Ваш телефон">
                 <input name="email" required type="email" placeholder="Ваш E-mail">
@@ -557,8 +558,9 @@
         </div>
     </div>
 
-
-
+    <a class="pageup" href="#up">
+        <img src="img/icons8-scroll-up-64.png" alt="scroll">
+    </a>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

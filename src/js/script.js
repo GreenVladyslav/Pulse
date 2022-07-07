@@ -107,6 +107,47 @@ $(document).ready(function(){
 	/* maskedinput */
 
 	$("input[name=phone]").mask("+38(099) 999-99-99");
+
+  /* Forms */
+
+  $('form').submit(function(e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+
+        $('form').trigger('reset');
+    });
+    return false;
+});
+
+  /* Smooth scroll and pageup */
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $(".pageup").fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 400);
+    return false;
+  });
+  
 });
 
 

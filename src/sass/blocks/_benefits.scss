@@ -38,4 +38,24 @@
             }
         }
     }
+    &__icon {
+        &_animated {
+            animation-name: heartbeat;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+        &_run {
+            animation-name: shoesrun;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        &_cup {    
+            animation: cupoftea 1.5s ease 0.5s infinite;
+        }
+    }
 }

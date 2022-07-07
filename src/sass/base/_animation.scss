@@ -1,0 +1,38 @@
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    to {
+       transform: scale(1);
+    }
+}
+
+@keyframes shoesrun {
+    from {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+    to {
+       transform: rotate(0) scale(1);
+    }
+}
+
+@keyframes  cupoftea{
+    from {
+        transform: rotate(0) scale(1);
+    }
+    30% {
+        transform: rotate(8deg) scale(1.1);
+    }
+    60% {
+        transform: rotate(-8deg) scale(1.1);
+    }
+    to {
+        transform: rotate(0) scale(1);
+    }
+}
