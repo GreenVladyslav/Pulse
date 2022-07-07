@@ -147,7 +147,8 @@ $(document).ready(function(){
     $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 400);
     return false;
   });
-  
+
+  new WOW().init();
 });
 
 
