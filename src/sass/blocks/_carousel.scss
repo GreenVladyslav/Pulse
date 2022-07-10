@@ -16,7 +16,7 @@
             width: 31px;
             height: 50px;
         }
-    } /* Slick-slider */
+    }
     .slick-next {
         right: -66px;
         left: auto;
@@ -52,5 +52,25 @@
     //         background-color: #b6b3b3;
     //     }
     // }
+}
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    li {
+        margin-right: 8px;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    button {
+        border-radius: 100%;
+        background-color: #413b3b;
+        width: 16px;
+        height: 16px;
+        font-size: 0px;
+    }
 }
 

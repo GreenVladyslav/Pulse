@@ -41,7 +41,7 @@
     &__icon {
         &_animated {
             animation-name: heartbeat;
-            animation-duration: 1.5s;
+            animation-duration: 3s;
             animation-iteration-count: infinite;
             animation-timing-function: ease;
             &:hover {
@@ -50,12 +50,12 @@
         }
         &_run {
             animation-name: shoesrun;
-            animation-duration: 1.5s;
+            animation-duration: 3s;
             animation-iteration-count: infinite;
             animation-timing-function: ease;
         }
         &_cup {    
-            animation: cupoftea 1.5s ease 0.5s infinite;
+            animation: cupoftea 3s ease 0.5s infinite;
         }
     }
 }

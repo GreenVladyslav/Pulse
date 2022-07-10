@@ -10,6 +10,14 @@ $(document).ready(function(){
               breakpoint: 992,
               settings: {
                 dots: true,
+                arrows: false,
+              }
+            },
+            {
+              breakpoint: 575,
+              settings: {
+                verticalSwiping: false,
+                dots: true,
                 arrows: false
               }
             }
@@ -34,6 +42,7 @@ $(document).ready(function(){
       });
     });
   }
+
   toggleClass('.catalog-item__link');
   toggleClass('.catalog-item__back');
 
@@ -49,11 +58,6 @@ $(document).ready(function(){
       $('.overlay, #order').fadeIn('slow');
     });
   });
-
-  // $('.button_submit').on('click', function() {
-  //   $('.modal').fadeOut('slow');
-  //   $('.overlay, #thanks').delay(500).fadeIn('slow');
-  // });
 
   $('.modal__close').on('click', function() {
     $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
